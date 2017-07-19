@@ -1,0 +1,91 @@
+#! /bin/bash
+# vim: set ts=4 : set set sw=4 :
+####################################################################################################################################
+# setupVideoWorkflowTools
+####################################################################################################################################
+#
+# Will install BREW, GIT, JQ, and MEDIAINFO as needed by the various Video Workflow Tools.
+#
+# 
+#
+####################################################################################################################################
+
+source "${JINGLE_VWF_TOOLS:=$(dirname "${0}")/..}/lib/commonlib.sh" || exit 1
+source "${JINGLE_VWF_TOOLS}/lib/toollib.sh" || exit 1
+
+vwfToolInit
+
+declare toolSet=( java brew git jq mediainfo ffmpeg imagemagick gs transporter leghorn switch )
+
+
+#===============================================================================
+# Main menu
+#-------------------------------------------------------------------------------
+
+function displayHelp() {
+	cat << END_HELP
+
+$(fullyQualifiedPath ${0}) Usage:
+	${TC_FG_BLUE}-h${TC_END}                  Display this help
+	${TC_FG_BLUE}-f${TC_END}                  Do work without prompting
+
+END_HELP
+}
+
+
+declare force=false
+
+while [[ ! -z "${1}" ]]; do
+	case "${1}" in
+	-h)		displayHelp; exit 1;;
+	-f)		force=true;;
+	*)		printlnError; printlnError "Unknown option $1"; printlnError ""; displayHelp; exit 5
+	esac
+	
+	shift 1
+done
+
+echo ""
+
+declare needsWork=false
+
+startSection "$(basename "${0}") version 1.0"
+for tool in "${toolSet[@]}"; do
+	vwfTool ${tool} fixStatus && needsWork=true
+done
+
+if ! ${needsWork}; then
+	echo ""
+	echo "No work needs to be done; exiting."
+	endSection
+	exit 0
+fi
+
+if ! ${force}; then
+	declare response
+	echo -n "Proceed [y/N]? "
+	read response
+	if [[ "${response}" != "y" ]]; then
+		echo "Terminating without doing work"
+		exit 2
+	fi
+fi
+
+#
+# 1. Fix Permissions on /usr/local directory
+#
+if [[ -d /usr/local && "$(stat -f '%Su'  /usr/local)" != "$(whoami)" ]]; then
+	echo "Fixing permissions on /usr/local"
+	sudo chown -R $(whoami):admin /usr/local
+fi
+
+
+#
+# 2. Install/update tools
+#
+for tool in "${toolSet[@]}"; do
+	vwfTool ${tool} fix
+done
+
+endSection
+# EOF
