@@ -1,0 +1,33 @@
+s = {
+	id = "EA5AF741-4BEF-403E-867A-47C4FD2E4E80",
+	internalName = "Pradip Gajjar - Logo",
+	title = "Pradip Gajjar - Logo",
+	type = "WatermarkingPreset",
+	value = {
+		items = {
+			{
+				anchor = "bottomright",
+				horizontalPadding = 0,
+				kind = "text",
+				opacity = 1,
+				orientation = "AB",
+				sizeKind = "relative",
+				sizeRelativeAmount = 0.12608503439122,
+				text = "© Pradip's Photography",
+				textColorBlue = 0,
+				textColorGreen = 0,
+				textColorRed = 0,
+				textFontName = "Mistral",
+				textHorizontalAlignment = "right",
+				textShadowAngle = 270,
+				textShadowEnabled = true,
+				textShadowOffset = 0.1,
+				textShadowOpacity = 0.84615384615385,
+				textShadowRadius = 0.2,
+				textVerticalAlignment = "top",
+				verticalPadding = 0,
+			},
+		},
+	},
+	version = 0,
+}

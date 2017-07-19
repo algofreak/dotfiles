@@ -1,0 +1,33 @@
+s = {
+	id = "5C3D8FBC-FF93-4B2A-B4DA-2E501F942D60",
+	internalName = "PG watermarks",
+	title = "PG watermarks",
+	type = "WatermarkingPreset",
+	value = {
+		items = {
+			{
+				anchor = "bottomright",
+				horizontalPadding = 0,
+				kind = "text",
+				opacity = 1,
+				orientation = "AB",
+				sizeKind = "relative",
+				sizeRelativeAmount = 0.2030810254491,
+				text = "© Pradip's Photogtaphy",
+				textColorBlue = 0,
+				textColorGreen = 0,
+				textColorRed = 0,
+				textFontName = "ComicSansMS-Bold",
+				textHorizontalAlignment = "right",
+				textShadowAngle = 270,
+				textShadowEnabled = true,
+				textShadowOffset = 0.1,
+				textShadowOpacity = 1,
+				textShadowRadius = 0.2,
+				textVerticalAlignment = "top",
+				verticalPadding = 0,
+			},
+		},
+	},
+	version = 0,
+}

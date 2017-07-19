@@ -1,0 +1,33 @@
+s = {
+	id = "EADECC24-DD01-4BC8-8AB9-35F541B93829",
+	internalName = "Pradip Gajjar - Watermark 2",
+	title = "Pradip Gajjar - Watermark 2",
+	type = "WatermarkingPreset",
+	value = {
+		items = {
+			{
+				anchor = "bottomright",
+				horizontalPadding = 0,
+				kind = "text",
+				opacity = 1,
+				orientation = "AB",
+				sizeKind = "relative",
+				sizeRelativeAmount = 0.12608503439122,
+				text = "© Pradip's Photography",
+				textColorBlue = 0,
+				textColorGreen = 0,
+				textColorRed = 0,
+				textFontName = "Mistral",
+				textHorizontalAlignment = "right",
+				textShadowAngle = 270,
+				textShadowEnabled = true,
+				textShadowOffset = 0.1,
+				textShadowOpacity = 0.84615384615385,
+				textShadowRadius = 0.2,
+				textVerticalAlignment = "top",
+				verticalPadding = 0,
+			},
+		},
+	},
+	version = 0,
+}
