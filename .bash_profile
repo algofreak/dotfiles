@@ -1,3 +1,7 @@
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
