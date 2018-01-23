@@ -50,8 +50,11 @@ sudo apt-get install android-tools-adb android-tools-fastboot
 apt-get install flashplugin-installer vlc
 
 ##### editor
-apt-get install vim
-sublime and atom (sudo dpkg -i file.deb)
+apt-get install vim gvim
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt update
+sudo apt install sublime-text
 
 ##### Security tools
 sudo apt-get install nmap
@@ -173,3 +176,12 @@ sudo apt-get -y clean
 
 #### Arduino
 sudo apt-get update && sudo apt-get install arduino arduino-core 
+
+
+#### Build essential tools
+sudo apt install build-essential
+sudo apt-get install manpages-dev man-db manpages-posix-dev
+
+#### Dev libraries
+sudo apt install libgtk-3-dev libgstreamer1.0-dev libclutter-1.0-dev libwebkit2gtk-4.0-devlibgda-5.0-dev
+
