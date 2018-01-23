@@ -113,4 +113,4 @@ alias gvim='gvim -font "Monospace 9"'
 
 export CLASSPATH=:$CLASSPATH:$XMLBEANS_HOME/lib/xbean.jar:$XMLBEANS_HOME/lib/xbean_xpath.jar:$XMLBEANS_HOME/lib/jaxen-1.1-beta-2.jar
 export EDITOR=vim
-
+export GIT_EDITOR=vim

@@ -206,3 +206,5 @@ sudo apt-get install cassandra
 sudo apt-get install zookeeperd
 
 sudo apt-get install apache2
+
+sudo apt-get install tree
