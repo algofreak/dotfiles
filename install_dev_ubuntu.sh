@@ -208,3 +208,7 @@ sudo apt-get install zookeeperd
 sudo apt-get install apache2
 
 sudo apt-get install tree
+
+##### Tkdiff
+sudo apt install tkcvs
+

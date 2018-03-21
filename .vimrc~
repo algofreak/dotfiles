@@ -107,4 +107,4 @@ set   ch=2      " Make command line two lines high
 
 set background=dark
 colorscheme elflord
-set guifont="Monospace 13"
+set guifont="Monospace 15"
